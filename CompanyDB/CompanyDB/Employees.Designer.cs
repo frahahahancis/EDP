@@ -28,82 +28,90 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button1 = new Button();
-            button2 = new Button();
-            button3 = new Button();
-            button4 = new Button();
-            button5 = new Button();
-            button6 = new Button();
-            button7 = new Button();
+            EmployeesBtn = new Button();
+            DepartmentsBtn = new Button();
+            ContractsBtn = new Button();
+            SalariesBtn = new Button();
+            TitlesBtn = new Button();
+            DeptmBtn = new Button();
+            LogoutBtn = new Button();
             label1 = new Label();
-            label2 = new Label();
             label3 = new Label();
             label4 = new Label();
             label5 = new Label();
+            dataGridView1 = new DataGridView();
+            label2 = new Label();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
-            // button1
+            // EmployeesBtn
             // 
-            button1.Location = new Point(22, 36);
-            button1.Name = "button1";
-            button1.Size = new Size(134, 23);
-            button1.TabIndex = 0;
-            button1.Text = "Employees";
-            button1.UseVisualStyleBackColor = true;
+            EmployeesBtn.Location = new Point(22, 36);
+            EmployeesBtn.Name = "EmployeesBtn";
+            EmployeesBtn.Size = new Size(134, 23);
+            EmployeesBtn.TabIndex = 0;
+            EmployeesBtn.Text = "Employees";
+            EmployeesBtn.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // DepartmentsBtn
             // 
-            button2.Location = new Point(22, 86);
-            button2.Name = "button2";
-            button2.Size = new Size(134, 23);
-            button2.TabIndex = 1;
-            button2.Text = "Departments";
-            button2.UseVisualStyleBackColor = true;
+            DepartmentsBtn.Location = new Point(22, 86);
+            DepartmentsBtn.Name = "DepartmentsBtn";
+            DepartmentsBtn.Size = new Size(134, 23);
+            DepartmentsBtn.TabIndex = 1;
+            DepartmentsBtn.Text = "Departments";
+            DepartmentsBtn.UseVisualStyleBackColor = true;
+            DepartmentsBtn.Click += DepartmentsBtn_Click;
             // 
-            // button3
+            // ContractsBtn
             // 
-            button3.Location = new Point(22, 140);
-            button3.Name = "button3";
-            button3.Size = new Size(134, 23);
-            button3.TabIndex = 2;
-            button3.Text = "Contracts";
-            button3.UseVisualStyleBackColor = true;
+            ContractsBtn.Location = new Point(22, 140);
+            ContractsBtn.Name = "ContractsBtn";
+            ContractsBtn.Size = new Size(134, 23);
+            ContractsBtn.TabIndex = 2;
+            ContractsBtn.Text = "Contracts";
+            ContractsBtn.UseVisualStyleBackColor = true;
+            ContractsBtn.Click += ContractsBtn_Click;
             // 
-            // button4
+            // SalariesBtn
             // 
-            button4.Location = new Point(22, 196);
-            button4.Name = "button4";
-            button4.Size = new Size(134, 23);
-            button4.TabIndex = 3;
-            button4.Text = "Salaries";
-            button4.UseVisualStyleBackColor = true;
+            SalariesBtn.Location = new Point(22, 196);
+            SalariesBtn.Name = "SalariesBtn";
+            SalariesBtn.Size = new Size(134, 23);
+            SalariesBtn.TabIndex = 3;
+            SalariesBtn.Text = "Salaries";
+            SalariesBtn.UseVisualStyleBackColor = true;
+            SalariesBtn.Click += SalariesBtn_Click;
             // 
-            // button5
+            // TitlesBtn
             // 
-            button5.Location = new Point(22, 259);
-            button5.Name = "button5";
-            button5.Size = new Size(134, 23);
-            button5.TabIndex = 4;
-            button5.Text = "Titles";
-            button5.UseVisualStyleBackColor = true;
+            TitlesBtn.Location = new Point(22, 259);
+            TitlesBtn.Name = "TitlesBtn";
+            TitlesBtn.Size = new Size(134, 23);
+            TitlesBtn.TabIndex = 4;
+            TitlesBtn.Text = "Titles";
+            TitlesBtn.UseVisualStyleBackColor = true;
+            TitlesBtn.Click += TitlesBtn_Click;
             // 
-            // button6
+            // DeptmBtn
             // 
-            button6.Location = new Point(22, 322);
-            button6.Name = "button6";
-            button6.Size = new Size(134, 23);
-            button6.TabIndex = 5;
-            button6.Text = "Department Managers";
-            button6.UseVisualStyleBackColor = true;
+            DeptmBtn.Location = new Point(22, 322);
+            DeptmBtn.Name = "DeptmBtn";
+            DeptmBtn.Size = new Size(134, 23);
+            DeptmBtn.TabIndex = 5;
+            DeptmBtn.Text = "Department Managers";
+            DeptmBtn.UseVisualStyleBackColor = true;
+            DeptmBtn.Click += DeptmBtn_Click;
             // 
-            // button7
+            // LogoutBtn
             // 
-            button7.Location = new Point(22, 400);
-            button7.Name = "button7";
-            button7.Size = new Size(106, 38);
-            button7.TabIndex = 6;
-            button7.Text = "LOG OUT";
-            button7.UseVisualStyleBackColor = true;
+            LogoutBtn.Location = new Point(22, 400);
+            LogoutBtn.Name = "LogoutBtn";
+            LogoutBtn.Size = new Size(106, 38);
+            LogoutBtn.TabIndex = 6;
+            LogoutBtn.Text = "LOG OUT";
+            LogoutBtn.UseVisualStyleBackColor = true;
+            LogoutBtn.Click += LogoutBtn_Click;
             // 
             // label1
             // 
@@ -114,15 +122,6 @@
             label1.TabIndex = 7;
             label1.Text = "Name";
             label1.Click += label1_Click;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(220, 36);
-            label2.Name = "label2";
-            label2.Size = new Size(81, 15);
-            label2.TabIndex = 8;
-            label2.Text = "Employee No.";
             // 
             // label3
             // 
@@ -151,42 +150,62 @@
             label5.TabIndex = 11;
             label5.Text = "Hire date";
             // 
-            // Form2
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(220, 86);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.Size = new Size(506, 259);
+            dataGridView1.TabIndex = 12;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(220, 36);
+            label2.Name = "label2";
+            label2.Size = new Size(81, 15);
+            label2.TabIndex = 8;
+            label2.Text = "Employee No.";
+            // 
+            // Employees
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(dataGridView1);
             Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
-            Controls.Add(button7);
-            Controls.Add(button6);
-            Controls.Add(button5);
-            Controls.Add(button4);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(button1);
-            Name = "Form2";
+            Controls.Add(LogoutBtn);
+            Controls.Add(DeptmBtn);
+            Controls.Add(TitlesBtn);
+            Controls.Add(SalariesBtn);
+            Controls.Add(ContractsBtn);
+            Controls.Add(DepartmentsBtn);
+            Controls.Add(EmployeesBtn);
+            Name = "Employees";
             Text = "Employees";
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private Button button1;
-        private Button button2;
-        private Button button3;
-        private Button button4;
-        private Button button5;
-        private Button button6;
-        private Button button7;
+        private Button EmployeesBtn;
+        private Button DepartmentsBtn;
+        private Button ContractsBtn;
+        private Button SalariesBtn;
+        private Button TitlesBtn;
+        private Button DeptmBtn;
+        private Button LogoutBtn;
         private Label label1;
-        private Label label2;
         private Label label3;
         private Label label4;
         private Label label5;
+        private DataGridView dataGridView1;
+        private Label label2;
     }
 }

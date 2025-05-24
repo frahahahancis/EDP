@@ -30,13 +30,13 @@
         {
             label2 = new Label();
             label1 = new Label();
-            button7 = new Button();
-            button6 = new Button();
-            button5 = new Button();
-            button4 = new Button();
-            button3 = new Button();
-            button2 = new Button();
-            button1 = new Button();
+            LogoutBtn = new Button();
+            DeptmBtn = new Button();
+            TitlesBtn = new Button();
+            SalariesBtn = new Button();
+            ContractsBtn = new Button();
+            DepartmentsBtn = new Button();
+            EmployeesBtn = new Button();
             SuspendLayout();
             // 
             // label2
@@ -57,84 +57,90 @@
             label1.TabIndex = 19;
             label1.Text = "Department Name";
             // 
-            // button7
+            // LogoutBtn
             // 
-            button7.Location = new Point(48, 388);
-            button7.Name = "button7";
-            button7.Size = new Size(106, 38);
-            button7.TabIndex = 18;
-            button7.Text = "LOG OUT";
-            button7.UseVisualStyleBackColor = true;
+            LogoutBtn.Location = new Point(37, 387);
+            LogoutBtn.Name = "LogoutBtn";
+            LogoutBtn.Size = new Size(106, 38);
+            LogoutBtn.TabIndex = 27;
+            LogoutBtn.Text = "LOG OUT";
+            LogoutBtn.UseVisualStyleBackColor = true;
+            LogoutBtn.Click += LogoutBtn_Click;
             // 
-            // button6
+            // DeptmBtn
             // 
-            button6.Location = new Point(48, 310);
-            button6.Name = "button6";
-            button6.Size = new Size(134, 23);
-            button6.TabIndex = 17;
-            button6.Text = "Department Managers";
-            button6.UseVisualStyleBackColor = true;
+            DeptmBtn.Location = new Point(37, 309);
+            DeptmBtn.Name = "DeptmBtn";
+            DeptmBtn.Size = new Size(134, 23);
+            DeptmBtn.TabIndex = 26;
+            DeptmBtn.Text = "Department Managers";
+            DeptmBtn.UseVisualStyleBackColor = true;
+            DeptmBtn.Click += DeptmBtn_Click;
             // 
-            // button5
+            // TitlesBtn
             // 
-            button5.Location = new Point(48, 247);
-            button5.Name = "button5";
-            button5.Size = new Size(134, 23);
-            button5.TabIndex = 16;
-            button5.Text = "Titles";
-            button5.UseVisualStyleBackColor = true;
+            TitlesBtn.Location = new Point(37, 246);
+            TitlesBtn.Name = "TitlesBtn";
+            TitlesBtn.Size = new Size(134, 23);
+            TitlesBtn.TabIndex = 25;
+            TitlesBtn.Text = "Titles";
+            TitlesBtn.UseVisualStyleBackColor = true;
+            TitlesBtn.Click += TitlesBtn_Click;
             // 
-            // button4
+            // SalariesBtn
             // 
-            button4.Location = new Point(48, 184);
-            button4.Name = "button4";
-            button4.Size = new Size(134, 23);
-            button4.TabIndex = 15;
-            button4.Text = "Salaries";
-            button4.UseVisualStyleBackColor = true;
+            SalariesBtn.Location = new Point(37, 183);
+            SalariesBtn.Name = "SalariesBtn";
+            SalariesBtn.Size = new Size(134, 23);
+            SalariesBtn.TabIndex = 24;
+            SalariesBtn.Text = "Salaries";
+            SalariesBtn.UseVisualStyleBackColor = true;
+            SalariesBtn.Click += SalariesBtn_Click;
             // 
-            // button3
+            // ContractsBtn
             // 
-            button3.Location = new Point(48, 128);
-            button3.Name = "button3";
-            button3.Size = new Size(134, 23);
-            button3.TabIndex = 14;
-            button3.Text = "Contracts";
-            button3.UseVisualStyleBackColor = true;
+            ContractsBtn.Location = new Point(37, 127);
+            ContractsBtn.Name = "ContractsBtn";
+            ContractsBtn.Size = new Size(134, 23);
+            ContractsBtn.TabIndex = 23;
+            ContractsBtn.Text = "Contracts";
+            ContractsBtn.UseVisualStyleBackColor = true;
+            ContractsBtn.Click += ContractsBtn_Click;
             // 
-            // button2
+            // DepartmentsBtn
             // 
-            button2.Location = new Point(48, 74);
-            button2.Name = "button2";
-            button2.Size = new Size(134, 23);
-            button2.TabIndex = 13;
-            button2.Text = "Departments";
-            button2.UseVisualStyleBackColor = true;
+            DepartmentsBtn.Location = new Point(37, 73);
+            DepartmentsBtn.Name = "DepartmentsBtn";
+            DepartmentsBtn.Size = new Size(134, 23);
+            DepartmentsBtn.TabIndex = 22;
+            DepartmentsBtn.Text = "Departments";
+            DepartmentsBtn.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // EmployeesBtn
             // 
-            button1.Location = new Point(48, 24);
-            button1.Name = "button1";
-            button1.Size = new Size(134, 23);
-            button1.TabIndex = 12;
-            button1.Text = "Employees";
-            button1.UseVisualStyleBackColor = true;
+            EmployeesBtn.Location = new Point(37, 23);
+            EmployeesBtn.Name = "EmployeesBtn";
+            EmployeesBtn.Size = new Size(134, 23);
+            EmployeesBtn.TabIndex = 21;
+            EmployeesBtn.Text = "Employees";
+            EmployeesBtn.UseVisualStyleBackColor = true;
+            EmployeesBtn.Click += EmployeesBtn_Click;
             // 
-            // Form3
+            // Departments
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(LogoutBtn);
+            Controls.Add(DeptmBtn);
+            Controls.Add(TitlesBtn);
+            Controls.Add(SalariesBtn);
+            Controls.Add(ContractsBtn);
+            Controls.Add(DepartmentsBtn);
+            Controls.Add(EmployeesBtn);
             Controls.Add(label2);
             Controls.Add(label1);
-            Controls.Add(button7);
-            Controls.Add(button6);
-            Controls.Add(button5);
-            Controls.Add(button4);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(button1);
-            Name = "Form3";
+            Name = "Departments";
             Text = "Departments";
             ResumeLayout(false);
             PerformLayout();
@@ -144,12 +150,12 @@
 
         private Label label2;
         private Label label1;
-        private Button button7;
-        private Button button6;
-        private Button button5;
-        private Button button4;
-        private Button button3;
-        private Button button2;
-        private Button button1;
+        private Button LogoutBtn;
+        private Button DeptmBtn;
+        private Button TitlesBtn;
+        private Button SalariesBtn;
+        private Button ContractsBtn;
+        private Button DepartmentsBtn;
+        private Button EmployeesBtn;
     }
 }
