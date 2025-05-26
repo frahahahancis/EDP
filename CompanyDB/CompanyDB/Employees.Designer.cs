@@ -35,12 +35,9 @@
             TitlesBtn = new Button();
             DeptmBtn = new Button();
             LogoutBtn = new Button();
-            label1 = new Label();
-            label3 = new Label();
-            label4 = new Label();
-            label5 = new Label();
             dataGridView1 = new DataGridView();
-            label2 = new Label();
+            ExportBtn = new Button();
+            AddBtn = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -113,43 +110,6 @@
             LogoutBtn.UseVisualStyleBackColor = true;
             LogoutBtn.Click += LogoutBtn_Click;
             // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(348, 36);
-            label1.Name = "label1";
-            label1.Size = new Size(39, 15);
-            label1.TabIndex = 7;
-            label1.Text = "Name";
-            label1.Click += label1_Click;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(468, 36);
-            label3.Name = "label3";
-            label3.Size = new Size(55, 15);
-            label3.TabIndex = 9;
-            label3.Text = "Birthdate";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new Point(576, 36);
-            label4.Name = "label4";
-            label4.Size = new Size(45, 15);
-            label4.TabIndex = 10;
-            label4.Text = "Gender";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Location = new Point(671, 36);
-            label5.Name = "label5";
-            label5.Size = new Size(55, 15);
-            label5.TabIndex = 11;
-            label5.Text = "Hire date";
-            // 
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -157,27 +117,35 @@
             dataGridView1.Name = "dataGridView1";
             dataGridView1.Size = new Size(506, 259);
             dataGridView1.TabIndex = 12;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
-            // label2
+            // ExportBtn
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(220, 36);
-            label2.Name = "label2";
-            label2.Size = new Size(81, 15);
-            label2.TabIndex = 8;
-            label2.Text = "Employee No.";
+            ExportBtn.Location = new Point(631, 351);
+            ExportBtn.Name = "ExportBtn";
+            ExportBtn.Size = new Size(95, 42);
+            ExportBtn.TabIndex = 32;
+            ExportBtn.Text = "Export to Excel";
+            ExportBtn.UseVisualStyleBackColor = true;
+            ExportBtn.Click += ExportBtn_Click;
+            // 
+            // AddBtn
+            // 
+            AddBtn.Location = new Point(612, 57);
+            AddBtn.Name = "AddBtn";
+            AddBtn.Size = new Size(114, 23);
+            AddBtn.TabIndex = 33;
+            AddBtn.Text = "Add Employees";
+            AddBtn.UseVisualStyleBackColor = true;
             // 
             // Employees
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(AddBtn);
+            Controls.Add(ExportBtn);
             Controls.Add(dataGridView1);
-            Controls.Add(label5);
-            Controls.Add(label4);
-            Controls.Add(label3);
-            Controls.Add(label2);
-            Controls.Add(label1);
             Controls.Add(LogoutBtn);
             Controls.Add(DeptmBtn);
             Controls.Add(TitlesBtn);
@@ -189,7 +157,6 @@
             Text = "Employees";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -201,11 +168,8 @@
         private Button TitlesBtn;
         private Button DeptmBtn;
         private Button LogoutBtn;
-        private Label label1;
-        private Label label3;
-        private Label label4;
-        private Label label5;
         private DataGridView dataGridView1;
-        private Label label2;
+        private Button ExportBtn;
+        private Button AddBtn;
     }
 }

@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label2 = new Label();
-            label1 = new Label();
             LogoutBtn = new Button();
             DeptmBtn = new Button();
             TitlesBtn = new Button();
@@ -37,25 +35,10 @@
             ContractsBtn = new Button();
             DepartmentsBtn = new Button();
             EmployeesBtn = new Button();
+            dataGridView1 = new DataGridView();
+            ExportBtn = new Button();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(266, 24);
-            label2.Name = "label2";
-            label2.Size = new Size(92, 15);
-            label2.TabIndex = 20;
-            label2.Text = "Department No.";
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(471, 24);
-            label1.Name = "label1";
-            label1.Size = new Size(105, 15);
-            label1.TabIndex = 19;
-            label1.Text = "Department Name";
             // 
             // LogoutBtn
             // 
@@ -126,11 +109,31 @@
             EmployeesBtn.UseVisualStyleBackColor = true;
             EmployeesBtn.Click += EmployeesBtn_Click;
             // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(217, 59);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.Size = new Size(506, 259);
+            dataGridView1.TabIndex = 28;
+            // 
+            // ExportBtn
+            // 
+            ExportBtn.Location = new Point(628, 324);
+            ExportBtn.Name = "ExportBtn";
+            ExportBtn.Size = new Size(95, 42);
+            ExportBtn.TabIndex = 32;
+            ExportBtn.Text = "Export to Excel";
+            ExportBtn.UseVisualStyleBackColor = true;
+            ExportBtn.Click += ExportBtn_Click;
+            // 
             // Departments
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(ExportBtn);
+            Controls.Add(dataGridView1);
             Controls.Add(LogoutBtn);
             Controls.Add(DeptmBtn);
             Controls.Add(TitlesBtn);
@@ -138,18 +141,13 @@
             Controls.Add(ContractsBtn);
             Controls.Add(DepartmentsBtn);
             Controls.Add(EmployeesBtn);
-            Controls.Add(label2);
-            Controls.Add(label1);
             Name = "Departments";
             Text = "Departments";
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
-
-        private Label label2;
-        private Label label1;
         private Button LogoutBtn;
         private Button DeptmBtn;
         private Button TitlesBtn;
@@ -157,5 +155,7 @@
         private Button ContractsBtn;
         private Button DepartmentsBtn;
         private Button EmployeesBtn;
+        private DataGridView dataGridView1;
+        private Button ExportBtn;
     }
 }

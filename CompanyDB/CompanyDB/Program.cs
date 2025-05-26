@@ -13,5 +13,6 @@ namespace CompanyDB
             ApplicationConfiguration.Initialize();
             Application.Run(new Login());
         }
+
     }
 }

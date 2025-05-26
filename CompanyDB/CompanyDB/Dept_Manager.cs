@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace CompanyDB
 {
@@ -15,6 +16,7 @@ namespace CompanyDB
         public Dept_Manager()
         {
             InitializeComponent();
+            LoadData();
         }
 
         private void EmployeesBtn_Click(object sender, EventArgs e)
@@ -62,6 +64,28 @@ namespace CompanyDB
             Login loginForm = new Login();
             loginForm.Show();
             this.Close();
+        }
+
+        private void LoadData()
+        {
+            string connectionString = "Server=127.0.0.1;Database=CompanyDB;Uid=root;Pwd=fgdc011604;";
+
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                try
+                {
+                    conn.Open();
+                    string query = "SELECT * FROM departments";
+                    MySqlDataAdapter adapter = new MySqlDataAdapter(query, conn);
+                    DataTable dt = new DataTable();
+                    adapter.Fill(dt);
+                    dataGridView1.DataSource = dt;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
         }
     }
 }
